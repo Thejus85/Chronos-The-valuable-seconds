@@ -1,0 +1,267 @@
+{
+  "frames": [
+    {
+      "duration": 83,
+      "filename": "orb-pedestal-purple_Pulse_South_00.png",
+      "frame": {
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Pulse",
+        "degrees": 0.0,
+        "id": "1abb5fad814865b9",
+        "index": 0,
+        "pivot": {
+          "x": 32,
+          "y": 51
+        },
+        "side": "South",
+        "tag": "Pulse_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 64,
+        "w": 64
+      },
+      "spriteSourceSize": {
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "orb-pedestal-purple_Pulse_South_01.png",
+      "frame": {
+        "h": 64,
+        "w": 64,
+        "x": 64,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Pulse",
+        "degrees": 0.0,
+        "id": "d83c2d8b4b1fcaa8",
+        "index": 1,
+        "pivot": {
+          "x": 32,
+          "y": 51
+        },
+        "side": "South",
+        "tag": "Pulse_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 64,
+        "w": 64
+      },
+      "spriteSourceSize": {
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "orb-pedestal-purple_Pulse_South_02.png",
+      "frame": {
+        "h": 64,
+        "w": 64,
+        "x": 128,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Pulse",
+        "degrees": 0.0,
+        "id": "1275bf83a827b28c",
+        "index": 2,
+        "pivot": {
+          "x": 32,
+          "y": 51
+        },
+        "side": "South",
+        "tag": "Pulse_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 64,
+        "w": 64
+      },
+      "spriteSourceSize": {
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "orb-pedestal-purple_Pulse_South_03.png",
+      "frame": {
+        "h": 64,
+        "w": 64,
+        "x": 192,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Pulse",
+        "degrees": 0.0,
+        "id": "4d5f9b062465925b",
+        "index": 3,
+        "pivot": {
+          "x": 32,
+          "y": 51
+        },
+        "side": "South",
+        "tag": "Pulse_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 64,
+        "w": 64
+      },
+      "spriteSourceSize": {
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "orb-pedestal-purple_Pulse_South_04.png",
+      "frame": {
+        "h": 64,
+        "w": 64,
+        "x": 256,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Pulse",
+        "degrees": 0.0,
+        "id": "209686c514a3c897",
+        "index": 4,
+        "pivot": {
+          "x": 32,
+          "y": 51
+        },
+        "side": "South",
+        "tag": "Pulse_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 64,
+        "w": 64
+      },
+      "spriteSourceSize": {
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "orb-pedestal-purple_Pulse_South_05.png",
+      "frame": {
+        "h": 64,
+        "w": 64,
+        "x": 320,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Pulse",
+        "degrees": 0.0,
+        "id": "a0ecb57dc94e584b",
+        "index": 5,
+        "pivot": {
+          "x": 32,
+          "y": 51
+        },
+        "side": "South",
+        "tag": "Pulse_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 64,
+        "w": 64
+      },
+      "spriteSourceSize": {
+        "h": 64,
+        "w": 64,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    }
+  ],
+  "meta": {
+    "app": "Pixor",
+    "format": "I8",
+    "frameTags": [
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 0,
+        "name": "Pulse_South",
+        "to": 5
+      }
+    ],
+    "image": "orb-pedestal-purple_64px_top-down_outline_lit.png",
+    "layers": [
+      {
+        "blendMode": "normal",
+        "name": "final",
+        "opacity": 255
+      }
+    ],
+    "pixor": {
+      "cell": {
+        "h": 64,
+        "w": 64
+      },
+      "emission": "s_emission.png",
+      "pivot": {
+        "x": 32,
+        "y": 51
+      }
+    },
+    "scale": "1",
+    "size": {
+      "h": 64,
+      "w": 384
+    },
+    "slices": [
+      {
+        "color": "#0000ffff",
+        "keys": [
+          {
+            "bounds": {
+              "h": 64,
+              "w": 64,
+              "x": 0,
+              "y": 0
+            },
+            "frame": 0,
+            "pivot": {
+              "x": 32,
+              "y": 51
+            }
+          }
+        ],
+        "name": "pivot"
+      }
+    ],
+    "version": "2.1.0"
+  }
+}

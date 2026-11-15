@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://chronos_item_loom_core"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_item"]
+radius = 12.0
+
+[node name="TemporalLoomCore" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_item")
+
+[node name="Glow" type="ColorRect" parent="."]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+color = Color(0.2, 0.9, 1, 0.8)
+
+[node name="ItemName" type="Label" parent="."]
+offset_left = -60.0
+offset_top = -24.0
+offset_right = 60.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 9
+text = "TEMPORAL LOOM CORE"
+horizontal_alignment = 1

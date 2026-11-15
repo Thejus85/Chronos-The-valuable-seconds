@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://chronos_dialogue_ui"]
+
+[ext_resource type="Script" path="res://Scripts/dialogue_box.gd" id="1_dialogue_script"]
+
+
+
+
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+
+bg_color = Color(0.96, 0.93, 0.83, 0.97)
+
+border_width_left = 2
+
+border_width_top = 2
+
+border_width_right = 2
+
+border_width_bottom = 2
+
+border_color = Color(0.58, 0.48, 0.33, 1)
+
+corner_radius_top_left = 6
+
+corner_radius_top_right = 6
+
+corner_radius_bottom_right = 6
+
+corner_radius_bottom_left = 6
+
+
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_dialogue_script")
+
+
+
+[node name="Panel" type="Panel" parent="."]
+
+anchors_preset = 7
+
+anchor_left = 0.5
+
+anchor_top = 1.0
+
+anchor_right = 0.5
+
+anchor_bottom = 1.0
+
+offset_left = -360.0
+
+offset_top = -160.0
+
+offset_right = 360.0
+
+offset_bottom = -20.0
+
+grow_horizontal = 2
+
+grow_vertical = 0
+
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+
+
+[node name="SpeakerLabel" type="Label" parent="Panel"]
+
+layout_mode = 0
+
+offset_left = 24.0
+
+offset_top = 12.0
+
+offset_right = 704.0
+
+offset_bottom = 36.0
+
+theme_override_colors/font_color = Color(0.24, 0.31, 0.31, 1)
+
+theme_override_font_sizes/font_size = 16
+
+text = "DR. ARIS - TEMPORAL PHYSICIST"
+
+
+
+[node name="DialogueText" type="RichTextLabel" parent="Panel"]
+
+layout_mode = 0
+
+offset_left = 24.0
+
+offset_top = 40.0
+
+offset_right = 704.0
+
+offset_bottom = 110.0
+
+theme_override_font_sizes/normal_font_size = 14
+theme_override_colors/default_color = Color(0.25, 0.22, 0.16, 1)
+
+bbcode_enabled = true
+
+text = "[color=#3f3424]You are time-slipping. The Chronal Loom is pulling the 2146 ruins into our present. Find the four stabilizers and return to the Nexus.[/color]"
+
+
+
+[node name="PromptLabel" type="Label" parent="Panel"]
+
+layout_mode = 0
+
+offset_left = 540.0
+
+offset_top = 114.0
+
+offset_right = 700.0
+
+offset_bottom = 134.0
+
+theme_override_colors/font_color = Color(0.38, 0.33, 0.25, 1)
+
+theme_override_font_sizes/font_size = 11
+
+text = "[ Press E to Continue ]"
+
+horizontal_alignment = 2
+

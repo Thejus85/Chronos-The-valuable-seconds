@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://chronos_temporal_skeleton"]
+
+[ext_resource type="Script" path="res://Scripts/npc_dialogue.gd" id="2_npc_script"]
+[ext_resource type="Texture2D" path="res://Assets/Characters/MysticWoods/sprites/characters/skeleton.png" id="1_skel_sheet"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skel"]
+radius = 6.0
+height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_idle_0"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_idle_1"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_idle_2"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_idle_3"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_idle_4"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_idle_5"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_walk_0"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_walk_1"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_walk_2"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_walk_3"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(144, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_walk_4"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(192, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skel_walk_5"]
+atlas = ExtResource("1_skel_sheet")
+region = Rect2(240, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_skel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_idle_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_idle_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_idle_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_idle_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_idle_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_idle_5")
+} ],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_walk_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_walk_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_walk_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_walk_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_walk_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skel_walk_5")
+} ],
+"loop": true,
+"name": &"walk_down",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
+radius = 28.0
+
+[node name="TemporalSkeleton" type="CharacterBody2D"]
+script = ExtResource("2_npc_script")
+npc_name = "Ancient Chrono-Echo"
+npc_role = "Timeline 2146 Survivor"
+initial_dialogue = PackedStringArray("Greetings, traveler of the 2096 origin line...", "I was an explorer who entered the Northern Portal when the Loom first fractured.", "The 4th stabilizer—the Chronal Phase Key—is enshrined on the sacred cliff altar to the north-west.", "Climb the carved stone stairs past the cliff to retrieve it.", "Then press [C] or [TAB] to open your portable Loom Terminal and weave the 4 stabilizers into the CHRONOS MASTER MATRIX!", "Once forged, step into the ancient Nexus Portal in the eastern grove to seal the tear forever!")
+z_index = 2
+collision_layer = 4
+collision_mask = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.7, 0.9, 1, 0.9)
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_skel")
+animation = &"idle_down"
+autoplay = "idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_skel")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_interact")
+
+[node name="PromptLabel" type="Label" parent="."]
+visible = false
+offset_left = -35.0
+offset_top = -28.0
+offset_right = 35.0
+offset_bottom = -14.0
+theme_override_font_sizes/font_size = 10
+text = "[E] SPEAK"
+horizontal_alignment = 1
+

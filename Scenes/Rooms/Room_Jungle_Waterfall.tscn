@@ -1,0 +1,148 @@
+[gd_scene load_steps=12 format=3 uid="uid://room_jungle_waterfall_v2"]
+
+[ext_resource type="Texture2D" path="res://Assets/Tilesets/GentleForest/jungle_waterfall_map_2096.png" id="1_map2096"]
+[ext_resource type="Texture2D" path="res://Assets/Tilesets/GentleForest/jungle_waterfall_map_2146.png" id="2_map2146"]
+[ext_resource type="Script" path="res://Scripts/jungle_waterfall.gd" id="3_script"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/waterfall.tscn" id="4_waterfall"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/phasekey.tscn" id="5_phasekey"]
+[ext_resource type="PackedScene" path="res://Scenes/nexus_portal.tscn" id="6_nexus_portal"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b_top"]
+size = Vector2(624, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b_left"]
+size = Vector2(16, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b_right"]
+size = Vector2(16, 480)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b_bot"]
+size = Vector2(624, 16)
+
+[node name="Room_Jungle_Waterfall" type="Node2D"]
+script = ExtResource("3_script")
+
+[node name="Background2096" type="Sprite2D" parent="."]
+texture_filter = 0
+texture = ExtResource("1_map2096")
+centered = false
+
+[node name="Background2146" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 0
+texture = ExtResource("2_map2146")
+centered = false
+
+[node name="Waterfall" parent="." instance=ExtResource("4_waterfall")]
+position = Vector2(360, 40)
+visible = false
+
+[node name="WorldBoundaries" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 1
+
+[node name="ColTop" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2(312, 8)
+shape = SubResource("RectangleShape2D_b_top")
+
+[node name="ColLeft" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2(8, 240)
+shape = SubResource("RectangleShape2D_b_left")
+
+[node name="ColRight" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2(616, 240)
+shape = SubResource("RectangleShape2D_b_right")
+
+[node name="ColBottom" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2(312, 472)
+shape = SubResource("RectangleShape2D_b_bot")
+
+[node name="PondWaterCollision" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 1
+
+[node name="PondPoly" type="CollisionPolygon2D" parent="PondWaterCollision"]
+polygon = PackedVector2Array(0, 286, 33, 291, 65, 305, 96, 325, 115, 341, 120, 360, 115, 379, 87, 365, 55, 346, 27, 336, 0, 332)
+
+[node name="RiverWaterCollision" type="StaticBody2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="RiverUpper" type="CollisionPolygon2D" parent="RiverWaterCollision"]
+polygon = PackedVector2Array(331, 0, 389, 0, 389, 154, 383, 169, 372, 178, 356, 210, 335, 245, 305, 245, 330, 163)
+
+[node name="RiverMid" type="CollisionPolygon2D" parent="RiverWaterCollision"]
+polygon = PackedVector2Array()
+
+[node name="RiverBot" type="CollisionPolygon2D" parent="RiverWaterCollision"]
+polygon = PackedVector2Array(275, 320, 305, 305, 325, 320, 305, 354, 323, 376, 340, 402, 360, 428, 386, 452, 417, 480, 370, 480, 339, 457, 315, 432, 295, 406, 279, 380, 263, 356, 245, 340)
+
+[node name="CliffLeftCollision" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 1
+
+[node name="CliffPolyLeft" type="CollisionPolygon2D" parent="CliffLeftCollision"]
+polygon = PackedVector2Array(57, 127, 78, 124, 92, 137, 92, 205, 77, 214, 58, 208)
+
+[node name="CliffTopBack" type="CollisionPolygon2D" parent="CliffLeftCollision"]
+polygon = PackedVector2Array(96, 61, 142, 61, 151, 72, 207, 73, 218, 61, 309, 61, 317, 77, 295, 88, 234, 88, 220, 97, 166, 96, 151, 86, 104, 86)
+
+[node name="CliffEastWall" type="CollisionPolygon2D" parent="CliffLeftCollision"]
+polygon = PackedVector2Array(272, 91, 310, 91, 322, 104, 322, 158, 307, 172, 286, 168, 274, 154)
+
+[node name="CliffFrontWall" type="CollisionPolygon2D" parent="CliffLeftCollision"]
+polygon = PackedVector2Array(119, 177, 147, 177, 156, 187, 156, 198, 146, 207, 119, 207)
+
+[node name="CliffFrontWallRight" type="CollisionPolygon2D" parent="CliffLeftCollision"]
+polygon = PackedVector2Array(214, 187, 234, 187, 245, 178, 259, 181, 259, 198, 247, 207, 214, 207)
+
+[node name="TreeObstacles" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 1
+
+[node name="ColTree1" type="CollisionPolygon2D" parent="TreeObstacles"]
+polygon = PackedVector2Array(470, 370, 530, 370, 530, 400, 470, 400)
+
+[node name="ColTree2" type="CollisionPolygon2D" parent="TreeObstacles"]
+polygon = PackedVector2Array(15, 100, 65, 100, 65, 140, 15, 140)
+
+[node name="ColTree3" type="CollisionPolygon2D" parent="TreeObstacles"]
+polygon = PackedVector2Array(531, 357, 558, 357, 562, 379, 554, 392, 534, 390, 527, 377)
+
+[node name="ColTree4" type="CollisionPolygon2D" parent="TreeObstacles"]
+polygon = PackedVector2Array(239, 420, 266, 420, 270, 442, 261, 455, 242, 453, 235, 439)
+
+[node name="ColTree5" type="CollisionPolygon2D" parent="TreeObstacles"]
+polygon = PackedVector2Array(570, 208, 599, 208, 603, 232, 594, 245, 575, 243, 568, 228)
+
+[node name="PhaseKey" parent="." instance=ExtResource("5_phasekey")]
+position = Vector2(170, 125)
+
+[node name="NexusPortal" parent="." instance=ExtResource("6_nexus_portal")]
+position = Vector2(500, 350)
+collision_layer = 4
+collision_mask = 1
+gravity = 0.0
+
+[node name="LastDoorwayExit" type="Area2D" parent="."]
+position = Vector2(200, 455)
+collision_layer = 4
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LastDoorwayExit"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="ExitPrompt" type="Label" parent="LastDoorwayExit"]
+offset_left = -70.0
+offset_top = -22.0
+offset_right = 70.0
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0.85, 0.95, 1, 0.9)
+theme_override_font_sizes/font_size = 10
+text = "▲ RETURN TO SECTOR 4 ▲"
+horizontal_alignment = 1
+

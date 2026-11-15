@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://chronos_vat_liquid_01"]
+
+[ext_resource type="Texture2D" path="res://Assets/Tilesets/Laboratory_2096/tiles_laboratory_LandOfPixels/16px/spriteSheet_tiledLiquids_16x16.png" id="1_liquid_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq0"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq1"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq2"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq3"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq4"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq5"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq6"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq7"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq8"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq9"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq10"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq11"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq12"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq13"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq14"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liq15"]
+atlas = ExtResource("1_liquid_sheet")
+region = Rect2(240, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_liquid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq9")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liq15")
+} ],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="AnimatedVatLiquid" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_liquid")
+autoplay = "default"

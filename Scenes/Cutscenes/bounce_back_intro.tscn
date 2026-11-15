@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://chronos_cutscene_bounce_back"]
+
+[ext_resource type="Script" path="res://Scripts/bounce_back_intro.gd" id="1_intro_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_play_normal"]
+bg_color = Color(0.93, 0.89, 0.77, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.58, 0.48, 0.33, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_play_hover"]
+bg_color = Color(0.98, 0.96, 0.89, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.65, 0.56, 0.41, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_play_pressed"]
+bg_color = Color(0.82, 0.77, 0.64, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34, 0.55, 0.67, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exit_normal"]
+bg_color = Color(0.9, 0.94, 0.96, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.64, 0.7, 0.74, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exit_hover"]
+bg_color = Color(0.98, 0.99, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.63, 0.73, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Animation" id="Animation_intro"]
+resource_name = "bounce_back_intro"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/CenterBox/Title:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.06, 1.06), Vector2(0.98, 0.98), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root/CenterBox/Title:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.18, 0.39, 0.52, 1), Color(0.22, 0.45, 0.58, 1), Color(0.18, 0.39, 0.52, 1), Color(0.18, 0.39, 0.52, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Root/GlitchGlow:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8, 2, 3.2, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.9, 0.95, 0.98, 1), Color(0.88, 0.94, 0.97, 1), Color(0.92, 0.96, 0.98, 1), Color(0.88, 0.94, 0.97, 1), Color(0.9, 0.95, 0.98, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_intro"]
+_data = {
+&"bounce_back_intro": SubResource("Animation_intro")
+}
+
+[node name="BounceBackCutscene" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_intro_script")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GlitchGlow" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.9, 0.95, 0.98, 1)
+
+[node name="CenterBox" type="VBoxContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -240.0
+offset_right = 340.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Title" type="Label" parent="Root/CenterBox"]
+layout_mode = 2
+pivot_offset = Vector2(340, 35)
+theme_override_colors/font_color = Color(0.25, 0.31, 0.3, 1)
+theme_override_colors/font_shadow_color = Color(0.55, 0.68, 0.75, 0.3)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 40
+text = "CHRONOS: THE VALUABLE SECOND"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tagline" type="Label" parent="Root/CenterBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.26, 0.42, 0.51, 1)
+theme_override_font_sizes/font_size = 17
+text = "WHEN YOU MESS WITH TIME, TIME MESSES BACK."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Root/CenterBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Narrative" type="Label" parent="Root/CenterBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.37, 0.41, 1)
+theme_override_font_sizes/font_size = 14
+text = "The Chronal Loom has fractured time.
+Find four stabilizers across the facility and the forest.
+Bring them back to the Loom, then enter the Nexus."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="Root/CenterBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Root/CenterBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="Root/CenterBox/Buttons"]
+custom_minimum_size = Vector2(320, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.29, 0.23, 0.16, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.31, 0.41, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_play_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_play_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_play_pressed")
+text = "START GAME  [ SPACE / ENTER ]"
+
+[node name="ExitButton" type="Button" parent="Root/CenterBox/Buttons"]
+custom_minimum_size = Vector2(320, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.27, 0.34, 0.38, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.31, 0.41, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_exit_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_exit_hover")
+text = "EXIT GAME  [ ESC ]"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_intro")
+}
+autoplay = "bounce_back_intro"

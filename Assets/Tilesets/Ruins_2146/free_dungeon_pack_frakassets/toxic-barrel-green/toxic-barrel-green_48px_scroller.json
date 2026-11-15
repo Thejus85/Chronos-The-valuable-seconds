@@ -1,0 +1,267 @@
+{
+  "frames": [
+    {
+      "duration": 83,
+      "filename": "toxic-barrel-green_Bubble_South_00.png",
+      "frame": {
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Bubble",
+        "degrees": 0.0,
+        "id": "5dea54d5dc23b073",
+        "index": 0,
+        "pivot": {
+          "x": 24,
+          "y": 41
+        },
+        "side": "South",
+        "tag": "Bubble_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 48,
+        "w": 48
+      },
+      "spriteSourceSize": {
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "toxic-barrel-green_Bubble_South_01.png",
+      "frame": {
+        "h": 48,
+        "w": 48,
+        "x": 48,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Bubble",
+        "degrees": 0.0,
+        "id": "ca07d41acf58e98e",
+        "index": 1,
+        "pivot": {
+          "x": 24,
+          "y": 41
+        },
+        "side": "South",
+        "tag": "Bubble_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 48,
+        "w": 48
+      },
+      "spriteSourceSize": {
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "toxic-barrel-green_Bubble_South_02.png",
+      "frame": {
+        "h": 48,
+        "w": 48,
+        "x": 96,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Bubble",
+        "degrees": 0.0,
+        "id": "876fb0fe92330a02",
+        "index": 2,
+        "pivot": {
+          "x": 24,
+          "y": 41
+        },
+        "side": "South",
+        "tag": "Bubble_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 48,
+        "w": 48
+      },
+      "spriteSourceSize": {
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "toxic-barrel-green_Bubble_South_03.png",
+      "frame": {
+        "h": 48,
+        "w": 48,
+        "x": 144,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Bubble",
+        "degrees": 0.0,
+        "id": "05586066e4564f01",
+        "index": 3,
+        "pivot": {
+          "x": 24,
+          "y": 41
+        },
+        "side": "South",
+        "tag": "Bubble_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 48,
+        "w": 48
+      },
+      "spriteSourceSize": {
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "toxic-barrel-green_Bubble_South_04.png",
+      "frame": {
+        "h": 48,
+        "w": 48,
+        "x": 192,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Bubble",
+        "degrees": 0.0,
+        "id": "dc51737d126432f1",
+        "index": 4,
+        "pivot": {
+          "x": 24,
+          "y": 41
+        },
+        "side": "South",
+        "tag": "Bubble_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 48,
+        "w": 48
+      },
+      "spriteSourceSize": {
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "toxic-barrel-green_Bubble_South_05.png",
+      "frame": {
+        "h": 48,
+        "w": 48,
+        "x": 240,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Bubble",
+        "degrees": 0.0,
+        "id": "e1e921e0fdf601b5",
+        "index": 5,
+        "pivot": {
+          "x": 24,
+          "y": 41
+        },
+        "side": "South",
+        "tag": "Bubble_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 48,
+        "w": 48
+      },
+      "spriteSourceSize": {
+        "h": 48,
+        "w": 48,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    }
+  ],
+  "meta": {
+    "app": "Pixor",
+    "format": "I8",
+    "frameTags": [
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 0,
+        "name": "Bubble_South",
+        "to": 5
+      }
+    ],
+    "image": "toxic-barrel-green_48px_scroller_outline_lit.png",
+    "layers": [
+      {
+        "blendMode": "normal",
+        "name": "final",
+        "opacity": 255
+      }
+    ],
+    "pixor": {
+      "cell": {
+        "h": 48,
+        "w": 48
+      },
+      "emission": "s_emission.png",
+      "pivot": {
+        "x": 24,
+        "y": 41
+      }
+    },
+    "scale": "1",
+    "size": {
+      "h": 48,
+      "w": 288
+    },
+    "slices": [
+      {
+        "color": "#0000ffff",
+        "keys": [
+          {
+            "bounds": {
+              "h": 48,
+              "w": 48,
+              "x": 0,
+              "y": 0
+            },
+            "frame": 0,
+            "pivot": {
+              "x": 24,
+              "y": 41
+            }
+          }
+        ],
+        "name": "pivot"
+      }
+    ],
+    "version": "2.1.0"
+  }
+}
