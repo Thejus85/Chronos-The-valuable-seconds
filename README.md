@@ -1,5 +1,7 @@
 # chronos: the valuable second
 
+itch.io page copy: [ITCH_PAGE.md](ITCH_PAGE.md)
+
 ## how to play
 
 - move with `wasd` or the arrow keys. hold `shift` to run.
